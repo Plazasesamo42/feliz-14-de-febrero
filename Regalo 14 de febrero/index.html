@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Para Fabiana</title>
+
+  <!-- Fuente estilo “Roblox web” (similar visual) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="rbx pink">
+  <header class="nav">
+    <div class="nav-left">
+      <div class="rbxLogo" aria-hidden="true">RBX</div>
+      <a class="navLink" href="#" onclick="return false;">Inicio</a>
+      <a class="navLink" href="#" onclick="return false;">Amistad</a>
+      <a class="navLink" href="#" onclick="return false;">Brookhaven</a>
+    </div>
+
+    <div class="nav-mid">
+      <div class="search">
+        <span class="searchIcon" aria-hidden="true">⌕</span>
+        <input id="searchFake" placeholder="Buscar..." aria-label="Buscar" />
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <button class="btn" id="btnEdit">Editar</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="layout">
+      <section class="card">
+        <div class="cardHead">
+          <div>
+            <div class="badge">Misión especial • 14 de febrero</div>
+            <h1 class="h1">Para <span id="friendName">Fabiana</span></h1>
+            <div class="sub">
+              <span id="friendNick">mi negra</span> • Chile ↔ Ecuador • Origen: Brookhaven
+            </div>
+          </div>
+
+          <div class="cardActions">
+            <button class="btn primary" id="btnCapsule">Abrir cápsula</button>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panelTitle">Bitácora</div>
+          <p class="type" id="typed"></p>
+        </div>
+
+        <div class="grid2">
+          <div class="panel">
+            <div class="panelTitle">Cápsula de recuerdos</div>
+            <div class="capsule">
+              <div class="capsuleTitle" id="capsuleTitle">Cápsula #1</div>
+              <div class="capsuleText" id="capsuleText"></div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panelTitle">Mini reto</div>
+            <div class="muted">Si acierta, se desbloquea “lluvia de corazones”.</div>
+
+            <div class="quiz">
+              <div class="quizQ" id="quizQ">¿Qué juego nos unió?</div>
+              <div class="row">
+                <input class="input" id="quizA" placeholder="Escribe aquí..." />
+                <button class="btn primary" id="btnCheck">Comprobar</button>
+              </div>
+              <div class="muted" id="quizMsg"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="side">
+        <div class="sideCard">
+          <div class="sideTitle">Detalles</div>
+          <div class="kv"><span>Duración</span><b>4 años</b></div>
+          <div class="kv"><span>Conexión</span><b>Roblox</b></div>
+          <div class="kv"><span>Mundo</span><b>Brookhaven</b></div>
+          <div class="hr"></div>
+        </div>
+
+        <div class="sideCard">
+          <div class="sideTitle">Compartir</div>
+          <button class="btn" id="btnCopy">Copiar link (si lo subes)</button>
+          <div class="muted small" id="copyMsg"></div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <div id="hearts" class="hearts" aria-hidden="true"></div>
+
+  <dialog id="dlg">
+    <div class="dlgHead">
+      <div class="dlgTitle">Editar</div>
+      <button class="x" id="btnClose" aria-label="Cerrar">✕</button>
+    </div>
+
+    <div class="dlgBody">
+      <label class="lbl">Nombre (arriba)</label>
+      <input class="input" id="editName" placeholder="Ej: Fabiana" />
+
+      <label class="lbl">Apodo (chiquito)</label>
+      <input class="input" id="editNick" placeholder="Ej: mi negra" />
+
+      <label class="lbl">Carta (bitácora)</label>
+      <textarea id="editBox"></textarea>
+
+      <div class="row">
+        <button class="btn primary" id="btnSave">Guardar</button>
+        <button class="btn" id="btnReset">Restaurar ejemplo</button>
+      </div>
+
+      <div class="muted small">Se guarda en este navegador.</div>
+    </div>
+  </dialog>
+
+  <script defer src="app.js"></script>
+</body>
+</html>
